@@ -1,1 +1,68 @@
+@startuml
+
+left to right direction
+:user1: -> (Start)
+:user2: -> (Start)
+
+rectangle Start {
+	(Start) --> (New Game)
+	(Start) --> (Load Character)
+	(New Game) -> (Select Build)
+	(Select Build) --> (Enter Floor)
+	(Load Character) --> (Enter Floor)
+}
+
+
+rectangle Navigation{
+	(Enter Floor) --> (Change Floor)
+	(Enter Floor) --> (Move)
+	(Enter Floor) --> (Use Environment)
+}
+
+rectangle Shop{
+	(Enter Floor) --> (Engage Shopkeeper)
+	(Engage Shopkeeper) -> (Buy Item)
+	(Engage Shopkeeper) -> (Sell Item)
+}
+
+rectangle Coworker {
+	(Enter Floor) --> (Engage Coworker)
+	(Engage Coworker) -> (Get Quest)
+	(Engage Coworker) -> (Turn In Quest)
+	(Engage Coworker) -> (Get Item)
+	(Engage Coworker) -> (Talk)
+}
+
+rectangle Inventory {
+	(Enter Floor) --> (Access Inventory)
+	(Access Inventory) --> (Drop Item)
+	(Access Inventory) --> (Upgrade Item)
+	(Access Inventory) --> (Use Item)
+}
+
+rectangle Advance-Character {
+	(Enter Floor) --> (Get Promotion)
+	(Get Promotion) -> (Level Up)
+}
+
+rectangle Dungeon {
+	user1 ..> (Single-Player)
+	:user1: ..> (Multi-Player)
+	
+	(Single-Player) --> (Enter Dungeon)
+	(Queue in Dungeon) -> (Multi-Player)
+	(Queue in Dungeon) -> (Single-Player)
+	rectangle Multi-Player {
+		(Multi-Player) -> (Join Teammates)
+		(Join Teammates) -> (Enter Dungeon)
+		:user2: ..> (Join Teammates)
+	}
+	(Enter Floor) --> (Queue in Dungeon)
+	(Enter Dungeon) --> (Attack)
+	(Enter Dungeon) --> (Get Item)
+	(Enter Dungeon) --> (Move)
+	(Enter Dungeon) --> (Use Environment)
+}
+
+@enduml
  
