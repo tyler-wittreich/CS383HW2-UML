@@ -1,0 +1,55 @@
+@startuml
+top to bottom direction
+skinparam packageStyle rect
+
+title <b> Use Case Summary </b>
+
+"Begin" as (Begin)
+
+Player1 ---> (Begin)
+Player2 ...> (Begin)
+
+usecase UC1 as "New Game 
+--
+Load 
+--
+Options"
+
+(Begin) --> UC1
+(UC1) ---> (GM)
+(UC1) -left-> (CSC)
+(CSC) -> (GM)
+(GM) ----> (CD)
+(GM) ----> (SN)
+(GM) ....> (Multi)
+(Multi) ....> (GM)
+
+rectangle "Character Creation" as CSC {
+(Name) -up-> (Class)
+(Outfit) -up-> (Class)
+}
+
+rectangle "Gameplay" as GM {
+(Movement) -up-> (Environment Interaction)
+(Combat) -up-> (Environment Interaction)
+}
+
+rectangle "Social Networking" as SN {
+(Reputation) -> (Rank)
+(Share)
+}
+
+rectangle "Character Details" as CD {
+(Inventory)
+(Save/Load) -up-> (Inventory)
+(Stats) -up-> (Inventory)
+(Items) -up-> (Inventory)
+}
+
+rectangle "Multiplayer" as Multi {
+(Trading)
+(Duels)
+}
+
+@enduml
+	
