@@ -1,0 +1,44 @@
+@startuml
+
+actor Player1
+actor Player2
+rectangle BegnningScreen {
+  Player1 -> (Online)
+  Player1 ->  (help)
+  Player1 -> (New Game) 
+  Player1 -> (Load Game)
+  (New Game) .> (Start Game) : extends
+  (Load Game) .> (Start Game) : extends 
+  Player2 -> (Online)
+  Player1 -> (Option)
+
+}
+rectangle Online{
+(Online) -> (Search Player Name) 
+(Online) -> (Search Player)
+(Search Start GamePlayer Name) -> (Start Network Game)
+(Search Player) -> (Start Network Game)
+(Start Network Game) .> (Start Game) : extends
+}
+rectangle Character {
+Player1 -> (PlayerActivity)
+Player2 -- (PlayerActivity)
+(PlayerActivity) .>(Fight) : include
+(PlayerActivity) .> (Chat)  : include
+(PlayerActivity) .> (Promote) : include
+(PlayerActivity) .> (Move)  : include
+} 
+rectangle InGame {
+(Start Game) -> (Save Game)
+(Start Game) -> (Game Option)
+(Start Game) -> ( Exit Game)
+(Start Game) -> NPC
+}
+rectangle NPC-system{
+NPC -> (Walking Around) : include
+NPC -> (Talk With Other NPC) : include
+NPC -> (Act Busy working) : include
+NPC .> (Be Able To Inter Act With Player) : include
+NPC .> (Fight With Players) : include
+}
+@enduml
