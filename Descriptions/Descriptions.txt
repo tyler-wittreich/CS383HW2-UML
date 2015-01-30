@@ -1,4 +1,4 @@
-Add your description text files to this folder-
+Add your description Latex files to this folder.
 
 The best descriptions will be compiled and shipped with the voted-on UML diagram.
 

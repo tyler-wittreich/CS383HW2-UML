@@ -1,0 +1,78 @@
+@startuml
+
+skinparam usecase {
+   BackgroundColor<<Main>> DarkSeaGreen
+}
+
+top to bottom direction
+:user 1: -> (GameOptions)
+:user 2   ...: -> (GameOptions)
+:user n: -> (GameOptions)
+
+
+
+rectangle Load/Create {
+   usecase LoadGame as "Load Game
+   ==
+   - Character profile loaded"
+   usecase NewGame as "New Game
+   ==
+   - New character loaded"
+   (GameOptions) --> (NewGame)
+   (GameOptions) --> (LoadGame)
+}
+
+rectangle Generate/Spawn {
+usecase Multiplayer as "Multiplayer
+==
+Players loaded together
+on same map from
+least-advanced player's 
+save point"
+
+usecase Singleplayer as "Solo Mission
+==
+Player loads unique map"
+
+(NewGame) ---> (Multiplayer)
+(LoadGame) ---> (Multiplayer)
+
+(LoadGame) ---> (Singleplayer)
+(NewGame) ---> (Singleplayer)
+
+
+
+Multiplayer ---> (Spawn)
+Singleplayer ---> (Spawn)
+}
+
+(Spawn) --> (Gameplay)
+
+(Gameplay) <<Main>>
+
+rectangle Combat {
+(Gameplay) -left-----> (Combat Initiated)
+(Combat Initiated) --> (Assigned Damage)
+(Assigned Damage) --> (Combat End)
+(Gameplay) <..... (Combat End)
+}
+
+note right of (Combat End) : Combat end initiates cool down time between combat sessions
+
+rectangle Trade {
+(Gameplay) ---> (Trade Initiated)
+(Trade Initiated) -> (Trade Dialogue Pop Up)
+(Trade Dialogue Pop Up) -> (Users Confirm Trade)
+(Users Confirm Trade) ..> (Gameplay)
+}
+
+rectangle Die {
+(Gameplay) ---> (Critical Damage Assigned)
+(Critical Damage Assigned) --> (Death Animation)
+(Death Animation) -> (Save Point)
+(Save Point) ..> (Spawn)
+}
+
+
+
+@enduml
