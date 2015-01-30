@@ -22,7 +22,7 @@ Sunday morning I will packaged the diagram we like the most and send it over to 
 
 C. Descriptions:
 
-Keep in mind that use case diagrams should also have an accompanying description set. When you post your UML diagram, post a quick .txt file with your descriptions! 
+Keep in mind that use case diagrams should also have an accompanying description set. When you post your UML diagram, post a quick Latex file with your descriptions! (I have just included the makefile).
 
 Cheers!
 
