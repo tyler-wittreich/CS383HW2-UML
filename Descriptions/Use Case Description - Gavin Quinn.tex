@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+
+\title{Use Case Description}
+\author{Gavin Quinn}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Use Case: Multi-player}
+	Players are linked together from different machines to play the game in a co-operative environment.
+
+		\subsection{Actor(s)}
+		
+			Player 1 and Player 2
+
+		\subsection{Precondition}
+ 
+			A second user must exist before multi-player tasks and strategies can be implemented.
+	
+		\subsection{Description}
+			\begin{enumerate}
+			\item A player attempts to enter a dungeon.
+			\item If they choose to play multi-player, the player is placed into a queue to await a playing partner.
+			\item Both players are linked by the system, entering the dungeon in a co-operative environment. Both players are able to perform the same functions as if they were in single player, such as shopping, item use, character advancement, and environment interaction.
+			\end{enumerate}
+
+		\subsection{Postcondition}
+		
+			Multi-player ends when a player disconnects, or both players have agreed to exit the dungeon. It is also possible for a player to die within a dungeon during multi-player. At this time, the gameplay would revert back to a single player environment until the downed player could be revived. 
+
+
+\end{document}
