@@ -1,0 +1,20 @@
+\documentclass[11pt]{article}
+
+\title{Use Case Description}
+\author{Tessa Saul}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Networked Multi-Player }
+    Our concept for multi-player is implemented through separate instances. 
+    These instances would occur when a player enters a dungeon with other players,
+    or wishes to trade with other players. This would feel similar to World of
+    Warcraft dungeoning because you can wait for people you do not know to be 
+    gathered into a group, or you can get a group of friends together to do a 
+    dungeon. Players can do multi-player trading inside dungeons where they 
+    are already multi-player instanced, or they can create a multi-player 
+    instance specifically for trading. This could look like a ``break room'' 
+    where you can go to trade with anyone, or just with a list of approved players. 
+\end{document}
