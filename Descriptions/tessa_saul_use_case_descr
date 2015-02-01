@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+
+\title{Use Case Description}
+\author{Tessa Saul}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Use Case: Character Advancement}
+      \subsection{Get a Promotion}
+        Actor: Player
+
+        Precondition: The player has completed the necessary quests and has sufficient social status with their coworkers
+
+        Summary: The player is ready for a promotion, so is awarded higher pay or higher access within the company.
+
+        Steps:
+        \begin{enumerate}
+        \item Player talks to their boss
+        \item Player is awarded a bonus
+        \item Player decides what to apply their bonus to such as the supply closet or getting an intern. 
+        \end{enumerate}
+    
+      \subsection{Leveling up}
+      Actor: Player 
+
+      Precondition: The player has enough experience to advance a level
+
+      Summary: The player gains enough experience to be awarded points to raise their character's abilities.
+
+      Steps:
+      \begin{enumerate}
+      \item The player selects the level up menu
+      \item The player distributes ability points and skill points. 
+      \item The player chooses any available feats
+      \end{enumerate}
+    
+    \section{Use Case: Trading}
+      \subsection{Trading}
+      Actors: Player1 and Player2
+      
+      Summary: Player1 connects with Player2, opens a trade menu and exhanges items. 
+      
+      Steps:
+      \begin{enumerate}
+      \item If the player is not in a multiplayer dungeon then the player starts a mulitplayer instance with another player
+      \item The first player selects another player and selects the trade menu
+      \item The first player and second player select items and currency to trade
+      \item The players can agree to the trade or reject it
+      \item If the players both agree to the trade, the players recieve the other's traded items and currency.
+      \end{enumerate}
+    
+    \section{Use Case: Saving}
+    \subsection{Saving}
+      Actor: The Player
+      
+      Summary: The player saves their progress so they can reload it later
+      
+      Steps: 
+      \begin{enumerate}
+      \item The player chooses the save menu
+      \item The player agrees to save their progress
+      \item The player's build, items, location, and status is recorded
+      \end{enumerate}
+    
+    \end{document}
