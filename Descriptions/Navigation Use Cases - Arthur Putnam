@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\begin{document}
+\title{Use Cases for Navigation}
+
+\author{Arthur Putnam}
+\maketitle
+
+
+
+
+
+    \maketitle
+
+    \section{Change Floor - Arthur Putnam}
+	
+
+		\subsection{Actor(s)}
+		Player 1, Player 2... Player n
+			
+
+		\subsection{Precondition}
+		\begin{enumerate}
+		\item Condition 1: Players must complete current floor objectives to proceed to the proceeding floor.
+        \item Condition 2: A prior floor or proceeding floor must exist in order to go to change floors.
+		\end{enumerate}
+	
+		\subsection{Summary}
+		Players go to the next level or map by changing floor. Players will change the floor to proceed to new areas of the game and return to previous areas of the game. Players can only interact with the floor they currently are on.
+		\subsection{Description}
+			\begin{enumerate}
+			\item Actor clicks on the entrance of the floor they wish to enter
+			\item The Actor proceeds to the floor.
+			\end{enumerate}
+
+		\subsection{Alternative}
+			The Actor does not have access to the floor they are attempting to change to. This causes a display message notifying why the floor has not changed.
+		
+		\subsection{Postconditions}	
+		Allows the Actor to interact with the floor they changed to or displays a message why the floor can’t be accessed. 	
+
+
+
+ \maketitle
+
+    \section{Use Environment - Arthur Putnam}
+	
+
+		\subsection{Actor(s)}
+		Player 1, Player 2... Player n
+			
+
+		\subsection{Precondition}
+		\begin{enumerate}
+		\item Actor must not currently interacting with another item, object or player.
+        \item Actor must have an item, object or player that has an interaction available 
+		\end{enumerate}
+	
+		\subsection{Summary}
+		The Actor will use the environment by interacting with another item, object or player in there current area of play. These interactions will allow Actors to make changes to there environment.
+		\subsection{Description}
+			\begin{enumerate}
+			\item Click on items, object or player.
+			\item if an interaction is available the default interaction will occur or selection of interaction options will be displayed.
+			\end{enumerate}
+
+		\subsection{Alternative}
+			If no interaction is available no action will be taken or a message will display notifying why no interaction is available.
+		\subsection{Postconditions}	
+		A item, object or player may change state, depending on the interaction that occcured. 
+		
+		
+		
+		\maketitle
+
+    \section{Move - Arthur Putnam}
+	
+
+		\subsection{Actor(s)}
+		Player 1, Player 2... Player n
+			
+
+		\subsection{Precondition}
+		\begin{enumerate}
+		\item Actor's character must have a tile they can move to.
+        \item Actor's character must be free of inhabiting states.  
+		\end{enumerate}
+	
+		\subsection{Summary}
+		Player will move from one tile to the next either using the arrow keys.
+		
+		\subsection{Description}
+			\begin{enumerate}
+			\item press the arrow key that corresponds to the tile the player wishes to move to
+			\item Player will move to the new tile location if possible.
+			\end{enumerate}
+
+		\subsection{Alternative}
+			If the player can not move to the desired location nothing will occur or a message will display depending upon why the user can not move.
+		\subsection{Postconditions}	
+			The player will be located in a new tile square or nothing will occur or a message will be displayed.
+\end{document}
+
