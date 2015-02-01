@@ -36,6 +36,18 @@
       \item The player chooses any available feats
       \end{enumerate}
     
+    \subsection{Save Character}
+      Actor: The Player
+      
+      Summary: The player saves their progress so they can reload it later
+      
+      Steps: 
+      \begin{enumerate}
+      \item The player chooses the save menu
+      \item The player agrees to save their progress
+      \item The player's build, items, location, and status is recorded
+      \end{enumerate}
+      
     \section{Use Case: Trading}
       \subsection{Trading}
       Actors: Player1 and Player2
@@ -49,19 +61,6 @@
       \item The first player and second player select items and currency to trade
       \item The players can agree to the trade or reject it
       \item If the players both agree to the trade, the players recieve the other's traded items and currency.
-      \end{enumerate}
-    
-    \section{Use Case: Saving}
-    \subsection{Saving}
-      Actor: The Player
-      
-      Summary: The player saves their progress so they can reload it later
-      
-      Steps: 
-      \begin{enumerate}
-      \item The player chooses the save menu
-      \item The player agrees to save their progress
-      \item The player's build, items, location, and status is recorded
       \end{enumerate}
     
     \end{document}
