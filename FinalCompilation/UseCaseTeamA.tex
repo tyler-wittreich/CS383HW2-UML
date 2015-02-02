@@ -1,0 +1,443 @@
+\documentclass[11pt]{article}
+
+\title{Use Case Description - Team A}
+\author{Casey Blair(blai191), Gavin Quinn(quin9284), Sarah Munds(mund8832), \\Tessa Saul(saul7812), Thomas Hagen(hage0699), \\Abdulmajeed Alotaibi(alot4458), Arthur Putnam(putn0266)}
+
+
+
+\begin{document}
+
+    \maketitle
+
+
+   \section{Networked Multi-Player - Tessa Saul }
+    Our concept for multi-player is implemented through separate instances. 
+    These instances would occur when a player enters a dungeon with other players,
+    or wishes to trade with other players. This would feel similar to World of
+    Warcraft dungeoning because you can wait for people you do not know to be 
+    gathered into a group, or you can get a group of friends together to do a 
+    dungeon. Players can do multi-player trading inside dungeons where they 
+    are already multi-player instanced, or they can create a multi-player 
+    instance specifically for trading. This could look like a break room
+    where you can go to trade with anyone, or just with a list of approved players. 
+
+    \section{Enter Dungeon - Sarah Munds}
+	Player groups enter a previously-queued dungeon. 
+
+		\subsection{Actor}
+		Players 1 - Players N
+
+		\subsection{Precondition}
+ 		Player or player group must have cleared previous dungeon by defeating all enemies in the level. Dungeon must be queued. All players in multiplayer group must be present and loaded. 
+
+		\subsection{Description}
+			\begin{enumerate}
+			\item Player approaches dungeon door and opens it by clicking on the door
+			\item Animation sequence for the new dungeon area
+			\item Enemies spawn in the dungeon area.
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			Previously-loaded dungeons may be re-queued if players re-enter the door. Enemies do not spawn. 
+		\subsection{Postcondition}
+			Players can now navigate and attack. 
+
+    \section{Queue Dungeon - Sarah Munds}
+	Progressive dungeons are queued by the game before players enter into a new dungeon map. 
+
+		\subsection{Actor}
+		Players 1 - Player N
+
+		\subsection{Precondition}
+ 		Players must have cleared previous map.
+
+		\subsection{Description}
+			\begin{enumerate}
+			\item New dungeon map is chosen
+			\item Dungeon map is loaded by the game
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			None 
+		\subsection{Postcondition}
+			Multiplayer teammates are able to join other players after dungeon is queued. 
+			Single players can proceed to enter dungeon. 
+
+
+    \section{Attack - Sarah Munds}
+	Player engages with an enemy, combat sequence assigns damage to both defending and offensive entities. 
+
+		\subsection{Actor}
+		Player 1 - Player N
+		\\Enemies
+
+		\subsection{Precondition}
+ 		Player(s) must have entered a dungeon
+
+		\subsection{Description}
+			\begin{enumerate}
+			\item Engage in combat with enemy
+			\item Choose weapon with which to attack
+			\item Choose attack sequence
+			\item Defending and offensive entities attack simultaneously
+			\item Damage is assigned to both offensive and defensive entities
+			\item If damage exceeds health threshold, entity dies. 
+			\item Players who die experience respawn after set amount of time.
+			\item Dead enemies are cleared. 
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			No entities die. Gameplay resumes. 
+
+		\subsection{Postcondition}
+			Player respawns if they have died. Gameplay resumes if damage did not exceed player threshold.
+
+
+	\section{Single Player - Sarah Munds}
+	Single player game style is chosen and queued by the player. 
+
+		\subsection{Actor}
+			Player 1
+		\subsection{Precondition}
+ 			Player has begun starting sequence from main menu.
+		\subsection{Description}
+			\begin{enumerate}
+			\item Player chooses single player mode in menu
+			\item Player creates new character, or player loads existing character
+			\item Game loads, player spawns
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			None
+
+		\subsection{Postcondition}
+			Player is now ready to begin gameplay sequence. Player may enter dungeon.
+
+
+
+    \section{Change Floor - Arthur Putnam}
+	
+
+		\subsection{Actor(s)}
+		Player 1, Player 2... Player n
+			
+
+		\subsection{Precondition}
+		\begin{enumerate}
+		\item Condition 1: Players must complete current floor objectives to proceed to the proceeding floor.
+        \item Condition 2: A prior floor or proceeding floor must exist in order to go to change floors.
+		\end{enumerate}
+	
+		\subsection{Summary}
+		Players go to the next level or map by changing floor. Players will change the floor to proceed to new areas of the game and return to previous areas of the game. Players can only interact with the floor they currently are on.
+		\subsection{Description}
+			\begin{enumerate}
+			\item Actor clicks on the entrance of the floor they wish to enter
+			\item The Actor proceeds to the floor.
+			\end{enumerate}
+
+		\subsection{Alternative}
+			The Actor does not have access to the floor they are attempting to change to. This causes a display message notifying why the floor has not changed.
+		
+		\subsection{Postconditions}	
+		Allows the Actor to interact with the floor they changed to or displays a message why the floor cannot be accessed. 	
+
+
+
+ \maketitle
+
+    \section{Use Environment - Arthur Putnam}
+	
+
+		\subsection{Actor(s)}
+		Player 1, Player 2... Player n
+			
+
+		\subsection{Precondition}
+		\begin{enumerate}
+		\item Actor must not currently interacting with another item, object or player.
+        \item Actor must have an item, object or player that has an interaction available 
+		\end{enumerate}
+	
+		\subsection{Summary}
+		The Actor will use the environment by interacting with another item, object or player in there current area of play. These interactions will allow Actors to make changes to there environment.
+		\subsection{Description}
+			\begin{enumerate}
+			\item Click on items, object or player.
+			\item if an interaction is available the default interaction will occur or selection of interaction options will be displayed.
+			\end{enumerate}
+
+		\subsection{Alternative}
+			If no interaction is available no action will be taken or a message will display notifying why no interaction is available.
+		\subsection{Postconditions}	
+		A item, object or player may change state, depending on the interaction that occurred. 
+		
+		
+		
+		\maketitle
+
+    \section{Move - Arthur Putnam}
+	
+
+		\subsection{Actor(s)}
+		Player 1, Player 2... Player n
+			
+
+		\subsection{Precondition}
+		\begin{enumerate}
+		\item Actor's character must have a tile they can move to.
+        \item Actor's character must be free of inhabiting states.  
+		\end{enumerate}
+	
+		\subsection{Summary}
+		Player will move from one tile to the next either using the arrow keys.
+		
+		\subsection{Description}
+			\begin{enumerate}
+			\item press the arrow key that corresponds to the tile the player wishes to move to
+			\item Player will move to the new tile location if possible.
+			\end{enumerate}
+
+		\subsection{Alternative}
+			If the player can not move to the desired location nothing will occur or a message will display depending upon why the user can not move.
+		\subsection{Postconditions}	
+			The player will be located in a new tile square or nothing will occur or a message will be displayed.
+
+
+      \section{Get a Promotion - Tessa Saul}
+        \subsection{Actor:} Player
+
+        \subsection{Precondition:} The player has completed the necessary quests and has sufficient social status with their coworkers
+
+        \subsection{Summary:} The player is ready for a promotion, so is awarded higher pay or higher access within the company.
+
+        \subsection{Steps:}
+        \begin{enumerate}
+        \item Player talks to their boss
+        \item Player is awarded a bonus
+        \item Player decides what to apply their bonus to such as the supply closet or getting an intern. 
+        \end{enumerate}
+    
+      \section{Leveling up - Tessa Saul}
+      \subsection{Actor:} Player 
+
+      \subsection{Precondition:} The player has enough experience to advance a level
+
+      \subsection{Summary:} The player gains enough experience to be awarded points to raise their character's abilities.
+
+      \subsection{Steps:}
+      \begin{enumerate}
+      \item The player selects the level up menu
+      \item The player distributes ability points and skill points. 
+      \item The player chooses any available feats
+      \end{enumerate}
+    
+    \section{Save Character - Tessa Saul}
+      \subsection{Actor:} The Player
+      
+      \subsection{Summary:} The player saves their progress so they can reload it later
+      
+      \subsection{Steps:} 
+      \begin{enumerate}
+      \item The player chooses the save menu
+      \item The player agrees to save their progress
+      \item The player's build, items, location, and status is recorded
+      \end{enumerate}
+      
+    \section{Trading - Tessa Saul}
+      
+      \subsection{Actors:} Player1 and Player2
+      
+      \subsection{Summary:} Player1 connects with Player2, opens a trade menu and exchanges items. 
+      
+      \subsection{Steps:}
+      \begin{enumerate}
+      \item If the player is not in a multiplayer dungeon then the player starts a mulitplayer instance with another player
+      \item The first player selects another player and selects the trade menu
+      \item The first player and second player select items and currency to trade
+      \item The players can agree to the trade or reject it
+      \item If the players both agree to the trade, the players receive the other's traded items and currency.
+      \end{enumerate}
+
+\section{Multi-player - Gavin Quinn}
+	Players are linked together from different machines to play the game in a co-operative environment.
+
+		\subsection{Actor(s)}
+		
+			Player 1 and Player 2
+
+		\subsection{Precondition}
+ 
+			A second user must exist before multi-player tasks and strategies can be implemented.
+	
+		\subsection{Description}
+			\begin{enumerate}
+			\item A player attempts to enter a dungeon.
+			\item If they choose to play multi-player, the player is placed into a queue to await a playing partner.
+			\item Both players are linked by the system, entering the dungeon in a co-operative environment. Both players are able to perform the same functions as if they were in single player, such as shopping, item use, character advancement, and environment interaction.
+			\end{enumerate}
+
+		\subsection{Postcondition}
+		
+			Multi-player ends when a player disconnects, or both players have agreed to exit the dungeon. It is also possible for a player to die within a dungeon during multi-player. At this time, the gameplay would revert back to a single player environment until the downed player could be revived. 
+
+
+
+\section{Inventory - Thomas Hagen}
+	Manage inventory quickly and intuitively
+
+
+		\subsection{Actor}
+			
+			Player 1 or Player 2
+
+		\subsection{Precondition}
+		
+			Must be in-game, not in pause menu or cut scene.
+			None really besides that, the inventory can be pulled up at any time,
+			even when empty.
+ 
+		\subsection{Description}
+			\begin{enumerate}
+			\item pull up inventory with 'i'
+			\item Navigate with up/down arrow keys and enter key
+			\item Select item
+			
+				\begin{enumerate}
+					\item Use
+					\item Upgrade
+					\item Drop
+				\end{enumerate}
+			\item Exit inventory
+			\end{enumerate}
+
+		\subsection{Postcondition}
+		
+			None
+
+
+\section{Talk - Casey Blair}
+	
+
+		\subsection{Actor(s)}
+			User 1 or 2
+			
+
+		\subsection{Precondition}
+				User has engaged a coworker (Engage Coworker)			
+	
+		\subsection{Summary}
+				Converse with fellow coworkers to get information on quests to complete, or to improve social standing.
+				\subsection{Steps}
+			\begin{enumerate}
+			\item User has engaged a coworker.
+			\item A chat dialog screen appears where the player can select what to say.
+			\item The user selects what to say to the coworker, and either receives a quest or receives useful information to progress though the game.
+			
+			\end{enumerate}
+
+		
+\section{Get Quest - Casey Blair}
+	
+
+		\subsection{Actor(s)}
+			User 1 or 2
+			
+
+		\subsection{Precondition}
+				The user has engaged a fellow coworker in conversation (Talk).
+	
+		\subsection{Summary}
+				The coworker gives the user a quest to complete. Once the quest is complete the user can level up attributes or obtain an item.
+			\subsection{Steps}
+			\begin{enumerate}
+			\item User talks to coworker.
+			\item Coworker mentions a task that they would like the user to complete, and what reward         they 			will get for doing it.
+			\item The user either accepts or doesn't accept the task.
+			
+			\end{enumerate}
+
+
+
+\section{Turn in Quest - Casey Blair}
+	
+
+		\subsection{Actor(s)}
+			User 1 or 2
+			
+
+		\subsection{Precondition}
+				The user has completed the quest.
+			
+	
+		\subsection{Summary}
+				The user has completed a quest, and returns to the coworker who gave him/her the quest. The coworker rewards the user with either an item, or gives the user points used to level up the user's attributes.
+			\subsection{Steps}
+			\begin{enumerate}
+			\item User completes a quest.
+			\item User returns to coworker and engages in conversation.
+			\item Coworker will acknowledge that task is complete, and give the user either attribute points or an item.
+			
+			\end{enumerate}
+
+
+
+\section{Engage Coworker - Casey Blair}
+	
+
+		\subsection{Actor(s)}
+			User 1 or 2
+			
+
+		\subsection{Precondition}
+				The user has entered a floor of the office (Enter Floor).
+			
+	
+		\subsection{Summary}
+			The user approaches a coworker that he/she wishes to talk to and asks them to talk.
+			\subsection{Steps}
+			\begin{enumerate}
+			\item The user sees a coworker that they wish to talk to.
+			\item The user approaches the coworker, and tries to talk to the coworker. 
+			\item If the user is able to talk to the coworker, both the coworker enter into a chat dialog screen where the user can choose between options of what to say. 
+			
+			\end{enumerate}
+
+
+
+\section{Get Item - Casey Blair}
+	
+
+		\subsection{Actor(s)}
+			User 1 or 2
+			
+
+		\subsection{Precondition}
+				The user has entered a dungeon (Enter Dungeon) or has engaged a coworker in conversation (Engage Coworker).
+			
+	
+		\subsection{Summary}
+				The user is currently in a dungeon and is completing a quest, and is able to pick up items. Also, for completing a dungeon, the user might receive an item from a coworker.
+			\subsection{Steps}
+			\begin{enumerate}
+			\item The user has entered a dungeon and is scavenging for items.
+			\item The user finds an item and picks it up and places it in their inventory.
+			\item The user completes a quest and is given another item from the coworker that sent them on the quest.
+			
+			\end{enumerate}
+
+\section{Shop - Abdulmajeed Alotaibi}
+	Players are able to have feature of shopping which it will have buying an item or selling an item, and all this will be through shopkeeper which player will be able to engage with.
+
+		\subsection{Buy}
+		
+			There will be list of items, which the shopkeeper have and each place shopkeeper have different list of item that he/she can sell to the player. The list of items will be in box look like chat box that the player can chose the item that he/she need. Moreover, player can buy things for health, while player on compete mode and need more health the player can use that item on that time.
+
+		\subsection{Sell}
+ 
+			Player will be able to sell the items that player do not need it, such as old weapon or armor that player do not need it anymore. Selling will be little different then buying item when the player want to sell an item it will show list of items that player have and the player can chose what item want to sell and it will get some money from selling it.
+	
+		\subsection{Engage Shopkeeper}
+			Shopkeeper is an NPC (Non-player character) which his job is to sell and buy items from players. It will be in different place standing waiting for players. Player will need to Engage with shopkeeper by walking to him/her and click on him/her, when the player do that the shopkeeper will show message greeting the player and give the player choices if the player want to buy or sell item. If the player chose buy the shopkeeper will show the a list of items that he/she have in box and if the player chose sell the shopkeeper will show the player list of items that the player have in box.
+
+\end{document}
