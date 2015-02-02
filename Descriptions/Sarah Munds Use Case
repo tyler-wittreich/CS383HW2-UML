@@ -1,0 +1,101 @@
+ \documentclass[11pt]{article}
+
+\title{Use Case Description}
+\author{Sarah Munds}
+
+
+
+\begin{document}
+
+    \section{Enter Dungeon - Sarah Munds}
+	Player groups enter a previously-queued dungeon. 
+
+		\subsection{Actor}
+		Players 1 - Players N
+
+		\subsection{Precondition}
+ 		Player or player group must have cleared previous dungeon by defeating all enemies in the level. Dungeon must be queued. All players in multiplayer group must be present and loaded. 
+
+		\subsection{Description}
+			\begin{enumerate}
+			\item Player approaches dungeon door and opens it by clicking on the door
+			\item Animation sequence for the new dungeon area
+			\item Enemies spawn in the dungeon area.
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			Previously-loaded dungeons may be re-queued if players re-enter the door. Enemies do not spawn. 
+		\subsection{Postcondition}
+			Players can now navigate and attack. 
+
+    \section{Queue Dungeon - Sarah Munds}
+	Progressive dungeons are queued by the game before players enter into a new dungeon map. 
+
+		\subsection{Actor}
+		Players 1 - Player N
+
+		\subsection{Precondition}
+ 		Players must have cleared previous map.
+
+		\subsection{Description}
+			\begin{enumerate}
+			\item New dungeon map is chosen
+			\item Dungeon map is loaded by the game
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			None 
+		\subsection{Postcondition}
+			Multiplayer teammates are able to join other players after dungeon is queued. 
+			Single players can proceed to enter dungeon. 
+
+
+    \section{Attack - Sarah Munds}
+	Player engages with an enemy, combat sequence assigns damage to both defending and offensive entities. 
+
+		\subsection{Actor}
+		Player 1 - Player N
+		\\Enemies
+
+		\subsection{Precondition}
+ 		Player(s) must have entered a dungeon
+
+		\subsection{Description}
+			\begin{enumerate}
+			\item Engage in combat with enemy
+			\item Choose weapon with which to attack
+			\item Choose attack sequence
+			\item Defending and offensive entities attack simultaneously
+			\item Damage is assigned to both offensive and defensive entities
+			\item If damage exceeds health threshold, entity dies. 
+			\item Players who die experience respawn after set amount of time.
+			\item Dead enemies are cleared. 
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			No entities die. Gameplay resumes. 
+
+		\subsection{Postcondition}
+			Player respawns if they have died. Gameplay resumes if damage did not exceed player threshold.
+
+
+	\section{Single Player - Sarah Munds}
+	Single player game style is chosen and queued by the player. 
+
+		\subsection{Actor}
+			Player 1
+		\subsection{Precondition}
+ 			Player has begun starting sequence from main menu.
+		\subsection{Description}
+			\begin{enumerate}
+			\item Player chooses single player mode in menu
+			\item Player creates new character, or player loads existing character
+			\item Game loads, player spawns
+			\end{enumerate}
+
+		\subsection{Alternatives}
+			None
+
+		\subsection{Postcondition}
+			Player is now ready to begin gameplay sequence. Player may enter dungeon.
+\end{document}
