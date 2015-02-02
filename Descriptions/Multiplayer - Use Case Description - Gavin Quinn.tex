@@ -29,5 +29,27 @@
 		
 			Multi-player ends when a player disconnects, or both players have agreed to exit the dungeon. It is also possible for a player to die within a dungeon during multi-player. At this time, the gameplay would revert back to a single player environment until the downed player could be revived. 
 
+	\section{Use Case: Join Teammates}
+		Players use a customized search tool to find compatible teammates. 
+
+		\subsection{Actor(s)}
+			
+			Player 1 and Player 2
+
+		\subsection{Precondition}
+		
+			Both players must join the "group finder" tool before they can be paired together. 
+
+		\subsection{Description}
+			\begin{enumerate}
+			\item Both players enter the "find teammate" tool.
+			\item The system begins searching for possible teammates, based upon current dungeon level and overall reputation standing. The system ignores possible pairings if a player is on the others "ignore" list. 
+			\item The system finds a suitable match and joins the two players. 
+			\end{enumerate}
+
+		\subsection{Postcondition}
+
+			The "group finder" is no longer being used when the two players have entered the game. At this point, the system waits until a player initiates a new search. 
+
 
 \end{document}
