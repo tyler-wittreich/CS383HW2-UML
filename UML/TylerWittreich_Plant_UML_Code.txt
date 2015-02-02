@@ -1,0 +1,83 @@
+@startuml
+
+skinparam usecase {
+   BackgroundColor<<Main>> DarkSeaGreen
+}
+
+top to bottom direction
+:user 1: -> (Start)
+:user 2: -> (Start)
+
+
+
+
+   usecase NewGame as "New Game
+   ==
+   - Select Options"
+   usecase LoadGame as "Load Game
+   ==
+   - Load Options"
+   (Start) --> (NewGame)
+   (Start) --> (LoadGame)
+
+   usecase Race as "Race
+   ==
+   - Select Race"
+   (NewGame) --> (Race)
+
+   usecase Outfit as "Outfit
+   ==
+   - Select Outfit"
+   (Race) --> (Outfit)
+
+
+
+usecase CreateProfile as "Create Profile
+   ==
+   - Create User Prfofile"
+   (Outfit) --> (CreateProfile)
+
+usecase LoadProfile as "Load Profile
+   ==
+   - Load User Prfofile"
+   (LoadGame) --> (LoadProfile)
+
+
+usecase Spawn as "Spawn
+   ==
+   - Load characters on map from last saved profile"
+
+
+CreateProfile ---> (Spawn)
+LoadProfile ---> (Spawn)
+
+
+(Spawn) --> (Begin)
+
+(Begin) <<Main>>
+
+rectangle social_networking {
+(Begin) -left-----> (interaction)
+(interaction) --> (comment)
+(comment) --> (rank)
+}
+
+
+rectangle Game_play {
+(Begin) ---> (environment)
+(environment) -> (movement)
+(environment) -> (combat)
+(environment) -> (social)
+}
+
+rectangle player_attributes {
+(Begin) ---> (inventory)
+(inventory) -> (stats)
+(inventory) -> (items)
+(inventory) -> (upgrades)
+(inventory) -> (save)
+}
+
+
+
+@enduml

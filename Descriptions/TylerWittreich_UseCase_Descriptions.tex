@@ -1,0 +1,260 @@
+ \documentclass[10pt]{article}
+
+\title{Use Case Description}
+\author{Tyler Wittreich}
+
+
+
+\begin{document}
+
+
+
+
+
+
+
+    \section{Start - Tyler Wittreich}
+
+		\subsection{Actor}
+		Players 1 - Players N
+		
+		
+		\subsection{Goals}
+ 		Load computer game 
+
+		\subsection{Precondition}
+ 		Users has decided to load computer program 
+
+		\subsection{Summary}
+		This action will load the computer program to the title screen of the game.
+
+		\subsection{Related Use Cases}
+			 \begin{enumerate}
+			   \item Load Character
+			   \item New Game
+			 \end{enumerate}
+	
+
+        \subsection{Steps}
+			\begin{enumerate}
+			\item Find computer game program on computer
+			\item Run computer game program
+			\end{enumerate}
+			
+		\subsection{Alternatives}
+			Do not start the game 
+			
+		\subsection{Postcondition}
+			Players will now be at a title screen where they can select to load their character from a previous saved game or start an entirely new game 
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+\section{Load Character - Tyler Wittreich}
+
+		\subsection{Actor}
+		Players 1 - Players N
+		
+		
+		\subsection{Goals}
+ 		Players will load a character from a previously saved character profile
+
+		\subsection{Precondition}
+ 		Players must start the computer game program and be at the title screen
+
+		\subsection{Summary}
+		Players will load a previously saved character profile. This will load the stats,reputation, progress,and attributes of the character that was saved from a previous game.
+
+		\subsection{Related Use Cases}
+			 \begin{enumerate}
+			    \item Start
+			    \item Enter Floor
+			 \end{enumerate}
+	
+
+        \subsection{Steps}
+			\begin{enumerate}
+			\item Select "Load Character" from the title screen
+			\item Select the saved character, depicted from a saved date, that you want to resume from
+			\item Select "Enter Floor"
+			\end{enumerate}
+			
+		\subsection{Alternatives}
+			Players can Select "New Game"
+			
+		\subsection{Postcondition}
+			Players will now have their character profiles loaded and start the process of loading the floor map
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+\section{New Game - Tyler Wittreich}
+
+		\subsection{Actor}
+		Players 1 - Players N
+		
+		
+		\subsection{Goals}
+ 		Players will start a new game from the beginning with no previously saved character profiles  
+
+		\subsection{Precondition}
+ 		Players must start the computer game program and be at the title screen
+
+		\subsection{Summary}
+			Players will load a previously saved character profile. This will load the stats,reputation, progress,and attributes of the character that was saved from a previous game.
+			
+		\subsection{Related Use Cases}
+		     \begin{enumerate}
+			    \item Start
+			    \item Select Build
+			 \end{enumerate}
+
+        \subsection{Steps}
+			 \begin{enumerate}
+			      \item Select "New Game" from the title screen
+			      \item Select "Select Build"
+			 \end{enumerate}
+			
+			
+		\subsection{Alternatives}
+			Players can Select "Load Character" 
+			
+		\subsection{Postcondition}
+			Players will now be directed to a screen that lets them select their character build 
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+\section{Select Build - Tyler Wittreich}
+
+		\subsection{Actor}
+		Players 1 - Players N
+		
+		
+		\subsection{Goals}
+ 		Players will select their race and  outfit color
+
+		\subsection{Precondition}
+ 		Players must start the computer game program and select the "New Game" option on the title screen
+
+		\subsection{Summary}
+			Players will select which race they want to be. They can choose between a Jedi, wookie, or android. Players will also get to select their outfit color. They can choose between a green, blue, or red outfit. 
+
+		\subsection{Related Use Cases}
+			\begin{enumerate}
+			      \item New Game
+			      \item Enter Floor
+			 \end{enumerate} 
+	
+        \subsection{Steps}
+			\begin{enumerate}
+			\item Select which race you want to be, depicted by a picture of each available race
+			\item Select which outfit color you want to wear, depicted by a picture of each available outfit color
+			\item Select "Enter Floor"
+			\end{enumerate}
+			
+		\subsection{Alternatives}
+			Players can revert back to the title screen.
+			
+		\subsection{Postcondition}
+			Players will now have their new character profile loaded and start the process of loading the floor map 
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+\section{Enter Room - Tyler Wittreich}
+
+		\subsection{Actor}
+		Players 1 - Players N
+		
+		
+		\subsection{Goals}
+ 		A specific game floor map will be loaded depending on the character profile loaded
+
+		\subsection{Precondition}
+ 		Players must have finished the process of loading a previous character profile or loading a new character profile 
+
+		\subsection{Summary}
+		A specific floor map will load depending on the character profile loaded. The floor map will populate with correct environmental features and user characters.
+
+		\subsection{Related Use Cases}
+			\begin{enumerate}
+			      \item Load Character
+			      \item Select Build
+			 \end{enumerate} 
+	
+
+        \subsection{Steps}
+			\begin{enumerate}
+			  \item Wait for Floor environment to load and characters to populate the map
+			  \item Wait for the message "start" to display across the middle of the screen
+			\end{enumerate}
+			
+		\subsection{Alternatives}
+			Players can revert back to the title menu 
+			
+		\subsection{Postcondition}
+			The game will be loaded and ready for user play 
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
